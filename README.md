@@ -1,72 +1,173 @@
-# Day_with_linux
+🐧 Guide Ultime : Day with Linux (Cybersécurité de A à Z)
 
-Où est Linux utilisé ?
+Bienvenue dans ce dépôt complet dédié à l'apprentissage de Linux pour la cybersécurité. Que vous débutiez sur TryHackMe, RootMe ou que vous prépariez des certifications, la maîtrise de Linux est votre arme la plus puissante.
+📋 Sommaire
 
-Il est juste de dire que Linux est beaucoup plus intimidant à l'approche que les systèmes d'exploitation (OS) tels que Windows. Les deux variantes ont leurs propres avantages et inconvénients. Par exemple, Linux est beaucoup plus léger et vous seriez surpris de savoir qu'il y a de fortes chances que vous utilisiez Linux sous une forme ou une autre tous les jours! Linux alimente des choses telles que:
+    Introduction : Pourquoi Linux ?
 
-    Sites que vous visitez
-    Panneaux de divertissement/contrôle de voiture
-    Systèmes de point de vente (PoS) tels que les caisses et les registres dans les magasins
-    Infrastructures critiques telles que les contrôleurs de feux de circulation ou les capteurs industriels
-    Téléphones et appareils informatiques similaires
-    Et bien plus encore !
+    Premiers pas : Qui êtes-vous sur la machine ?
 
+    Navigation et gestion des fichiers sans souris
 
-    Qui êtes-vous sur cette machine ?
+    Recherche de fichiers et de texte
 
-Linux est un choix populaire pour les serveurs et les machines que vous allez interagir dans la cybersécurité. Cette interaction commence avec le terminal, pas avec une souris. Dans cette pièce, vous interagirez avec votre tout premier terminal Linux - un endroit où nous pouvons exécuter des commandes sur le système.
+    Opérateurs, flux et redirection
 
-Être familier avec le terminal (interface de ligne de commande) sur Linux est une compétence critique car vous passerez probablement la plupart de votre temps ici dans la cybersécurité. De l'exécution d'outils de piratage à la chasse aux attaquants.
+    Gestion des permissions et des droits (Crucial en Cyber)
 
-Une commande est une instruction que nous pouvons donner à l'ordinateur pour effectuer une tâche donnée. L'une des premières commandes que nous pouvons faire est whoami. Ceci est important dans la cybersécurité, car vous changerez souvent d’utilisateur sur la machine, ce qui détermine ce que vous pouvez et ne pouvez pas faire.
-whoami 	vous dit qui vous êtes sur le système
+    Gestion des processus et des services
 
-Lorsque vous exécutez votre première commande, vous verrez du texte. Nous appelons cela la production. Interagir avec Linux ressemble à une conversation. Vous lui donnez une instruction, et il vous donne la sortie. Nous pouvons demander à Linux de produire du texte spécifique pour nous.
-echo 	produire un texte spécifique qui est fourni
+    Réseau et investigation de base
 
-Pour faire écho au texte "TryHackMe", nous pouvons utiliser echo TryHackMe. Pour plusieurs mots, nous devrons les envelopper dans des citations. Par exemple, echo "hello world". Utilisation echon'est que le début d'une compétence très importante dans la cybersécurité: être capable de créer de la production et de l'envoyer quelque part. Vous verrez comment cette compétence est davantage utilisée dans les tâches à venir.
-Caractère
- 
- 
- 
- 
-Vous devrez...
-1. Utilisez le whoamicommander de voir qui vous êtes sur le système.
-2. Appuyez sur la touche Entrée pour exécuter la commande.
-3. Maintenant, utilisez echopour sortir le texte TryHackMe.
+    Gestion des paquets et installations
 
-Astuce pro: Lorsque vous utilisez le terminal, vous pouvez appuyer sur les touches fléchées vers le haut et vers le bas de votre clavier pour faire défiler les commandes que vous avez déjà entrées.
+1. Introduction : Pourquoi Linux ?
 
+Il est juste de dire que Linux est beaucoup plus intimidant à l'approche que les systèmes d'exploitation (OS) tels que Windows. Les deux variantes ont leurs propres avantages et inconvénients. Par exemple, Linux est beaucoup plus léger et vous seriez surpris de savoir qu'il y a de fortes chances que vous utilisiez Linux sous une forme ou une autre tous les jours ! Linux alimente des choses telles que :
 
-Déplacez-vous sans jamais toucher une souris
+    Les sites web que vous visitez chaque jour.
 
-Apprenons à naviguer dans les fichiers du système via le terminal. Quatre commandes font presque toute la navigation
-ls 	Liste ce qu'il y a dans le dossier courant
-cd 	modifier le répertoire — se déplacer dans un dossier
-cat 	montrer le contenu d'un fichier
-pwd 	Imprimer le répertoire de travail — "où suis-je?"
+    Les panneaux de divertissement et de contrôle de voitures modernes.
 
-Sous Linux, vous remarquerez peut-être que les fichiers et les dossiers apparaissent sous différentes couleurs. Cela permet d'identifier facilement ce qu'il est. Sur ce système Linux, les dossiers sont bleus.
+    Les systèmes de point de vente (PoS) tels que les caisses et registres dans les magasins.
 
+    Les infrastructures critiques telles que les contrôleurs de feux de circulation ou les capteurs industriels.
 
+    Les téléphones (Android est basé sur un noyau Linux) et appareils informatiques similaires.
 
-Ne cherchez plus jamais les choses à la main
+Dans la cybersécurité, Linux est le roi incontesté des serveurs, des environnements cloud et des machines que vous allez auditer ou attaquer. Cette interaction commence avec le terminal, et non avec une souris.
+2. Premiers pas : Qui êtes-vous sur la machine ?
 
-Nous pouvons utiliser un ensemble de Linux commandes pour nous aider à rechercher et à travers les fichiers. Plutôt que de faire défiler beaucoup de texte, nous pouvons demander à Linux de faire le travail difficile pour nous:
-find 	Rechercher des fichiers par leur nom. Par exemple, find -name passwords.txt
-grep 	Recherche à l'intérieur pour le texte. Par exemple, grep "password123" passwords.txt
+Être familier avec le terminal (interface de ligne de commande) sur Linux est une compétence critique. Vous y passerez 90% de votre temps, de l'exécution d'outils de piratage (Nmap, Metasploit) à la chasse aux attaquants (Blue Teaming).
 
-Il y a un fichier journal à partir d'un serveur Web dans votre dossier d'accueil appelé access.log, qui fait des centaines de lignes. Quelque part à l'intérieur est un drapeau.
+Une commande est une instruction donnée à l'ordinateur pour effectuer une tâche.
 
+    whoami : Indique quel utilisateur vous êtes sur le système. C'est fondamental en cybersécurité car vos actions dépendent entièrement de vos privilèges (utilisateur standard vs administrateur root).
 
+    echo [texte] : Permet d'afficher un texte spécifique dans le terminal.
 
+        Exemple : echo "TryHackMe" ou echo "hello world".
 
-Combiner les commandes et capturer leur sortie
+    Astuce pro : Dans le terminal, utilisez les touches flèche haut et flèche bas de votre clavier pour faire défiler rapidement l'historique des commandes déjà entrées.
 
-Dans Linux, il y a un ensemble de caractères spéciaux qui peuvent combiner des commandes ensemble. Ceux-ci sont appelés "Operators" qui disent à Linux comment il doit traiter les deux commandes. De pouvoir combiner des commandes à faire ce qu'on appelle une redirection - envoyer la sortie des commandes ailleurs. Passons en revue ceux-ci maintenant:
-& 	Exécute la commande, mais n'attend pas qu'elle ne se termine avant de pouvoir faire autre chose. La commande s'exécute dans le backgorund, et est utile pour les commandes qui peuvent prendre un certain temps à compléter, ou celles que vous voulez continuer à exécuter.
-&& 	Exécute les deux commandes, mais attend que la première commande se termine en premier, avant la suivante. Comme un ensemble de dominos.
-> 	Utilisé pour rediriger la sortie. Nous pouvons prendre la sortie d'une commande et l'envoyer à un fichier. Cet opérateur va écraser tout ce qui existe dans le fichier.
->> 	Ce redirecteur fait la même chose, mais au lieu d'écraser, il ajoutera simplement la sortie au bas du fichier.
+3. Navigation et gestion des fichiers sans souris
 
-Par exemple, echo hey > welcomefait un dossier bienvenu contenant "hey". Nous pouvons utiliser cat welcomepour vérifier que ça a fonctionné.
+Apprenons à naviguer dans les fichiers du système uniquement via le terminal. Quatre commandes font presque toute la navigation de base :
+
+    pwd (Print Working Directory) : Imprime le répertoire de travail actuel — "Où suis-je ?".
+
+    ls (List) : Liste ce qu'il y a dans le dossier courant.
+
+        Astuce : ls -l (affiche les détails) ou ls -a (affiche les fichiers cachés commençant par un point). Sous Linux, les dossiers apparaissent généralement en bleu.
+
+    cd (Change Directory) : Permet de changer de répertoire et de se déplacer (ex: cd /etc ou cd .. pour reculer d'un dossier).
+
+    cat (Concatenate) : Permet d'afficher directement le contenu textuel d'un fichier dans le terminal.
+
+Commandes pour manipuler les fichiers :
+
+    touch nom_de_fichier.txt : Crée un fichier vide.
+
+    mkdir nom_de_dossier : Crée un nouveau dossier.
+
+    cp source destination : Copie un fichier ou un dossier.
+
+    mv source destination : Déplace ou renomme un fichier.
+
+    rm nom_de_fichier : Supprime un fichier.
+
+4. Recherche de fichiers et de texte
+
+Ne cherchez plus jamais les choses à la main. Plutôt que de faire défiler des centaines de lignes à l'œil, utilisez ces moteurs de recherche intégrés :
+
+    find : Recherche des fichiers par leur nom ou leurs critères.
+
+        Exemple : find / -name passwords.txt (cherche le fichier passwords.txt à partir de la racine du disque).
+
+    grep : Recherche à l'intérieur d'un fichier pour trouver un texte ou un motif précis.
+
+        Exemple : grep "password123" access.log (recherche le mot de passe dans un fichier journal de serveur).
+
+5. Opérateurs, flux et redirection
+
+Sous Linux, les opérateurs permettent de combiner des commandes entre elles et de rediriger les flux de données (entrées/sorties).
+
+    & : Exécute la commande en arrière-plan (background) sans bloquer votre terminal.
+
+    && : Exécute la deuxième commande uniquement si la première s'est terminée avec succès (comme un jeu de dominos).
+
+    > : Redirige la sortie d'une commande vers un fichier. Attention : cet opérateur écrase tout le contenu préexistant dans le fichier cible.
+
+    >> : Redirige la sortie mais l'ajoute (append) simplement à la fin du fichier sans rien écraser.
+
+        Exemple : echo "hey" > welcome crée (ou écrase) le fichier welcome avec le texte "hey". On vérifie avec cat welcome.
+
+6. Gestion des permissions et des droits (Crucial en Cyber)
+
+En cybersécurité, comprendre les permissions est vital pour l'escalade de privilèges. Tapez ls -l pour voir les droits d'un fichier (ex: -rwxr-xr--).
+
+    Les trois types d'utilisateurs :
+
+        u (User) : Le propriétaire du fichier.
+
+        g (Group) : Le groupe associé au fichier.
+
+        o (Others) : Tout le monde le reste.
+
+    Les trois permissions :
+
+        r (Read = 4) : Lire le fichier.
+
+        w (Write = 2) : Modifier ou supprimer le fichier.
+
+        x (eXecute = 1) : Exécuter le fichier (script ou programme).
+
+    Modifier les permissions (chmod) :
+
+        Exemple : chmod +x script.sh rend un script exécutable.
+
+        Exemple numérique : chmod 755 fichier (Propriétaire: rwx=7, Groupe: r-x=5, Autres: r-x=5).
+
+    Modifier le propriétaire (chown) :
+
+        sudo chown utilisateur:groupe fichier change le propriétaire d'un fichier.
+
+7. Gestion des services et processus
+
+Pour savoir ce qui tourne sur la machine (et repérer d'éventuels malwares ou services vulnérables) :
+
+    ps aux : Liste tous les processus en cours d'exécution sur le système.
+
+    top ou htop : Affiche en temps réel l'utilisation des ressources CPU/RAM et les processus actifs.
+
+    kill [PID] : Tue un processus bloqué ou suspect à l'aide de son identifiant (PID).
+
+    systemctl : Gère les services du système.
+
+        Exemple : sudo systemctl status apache2 (vérifie si le serveur web tourne).
+
+        Exemple : sudo systemctl start ssh (démarre le service SSH).
+
+8. Réseau et investigation de base
+
+Pour analyser la connectivité et identifier des portes dérobées ou des ports ouverts :
+
+    ip a ou ifconfig : Affiche les interfaces réseau et les adresses IP de la machine.
+
+    ping [adresse_ip] : Teste la connectivité réseau avec une autre machine.
+
+    netstat -tulnp ou ss -tulnp : Liste tous les ports en écoute sur la machine (très utile pour auditer les services actifs).
+
+    curl ou wget : Permet de télécharger des fichiers ou d'interagir avec des serveurs web directement depuis le terminal.
+
+9. Gestion des paquets et installations
+
+Selon la distribution Linux que vous utilisez (Ubuntu/Debian ou Kali Linux), vous gérerez vos logiciels via des gestionnaires de paquets :
+
+    sudo apt update : Met à jour la liste des paquets disponibles.
+
+    sudo apt upgrade : Met à jour tous les logiciels installés.
+
+    sudo apt install [nom_du_paquet] : Installe un nouvel outil (ex: sudo apt install nmap).
+
+    sudo apt remove [nom_du_paquet] : Désinstalle un outil.
