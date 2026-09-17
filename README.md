@@ -57,3 +57,16 @@ find 	Rechercher des fichiers par leur nom. Par exemple, find -name passwords.tx
 grep 	Recherche à l'intérieur pour le texte. Par exemple, grep "password123" passwords.txt
 
 Il y a un fichier journal à partir d'un serveur Web dans votre dossier d'accueil appelé access.log, qui fait des centaines de lignes. Quelque part à l'intérieur est un drapeau.
+
+
+
+
+Combiner les commandes et capturer leur sortie
+
+Dans Linux, il y a un ensemble de caractères spéciaux qui peuvent combiner des commandes ensemble. Ceux-ci sont appelés "Operators" qui disent à Linux comment il doit traiter les deux commandes. De pouvoir combiner des commandes à faire ce qu'on appelle une redirection - envoyer la sortie des commandes ailleurs. Passons en revue ceux-ci maintenant:
+& 	Exécute la commande, mais n'attend pas qu'elle ne se termine avant de pouvoir faire autre chose. La commande s'exécute dans le backgorund, et est utile pour les commandes qui peuvent prendre un certain temps à compléter, ou celles que vous voulez continuer à exécuter.
+&& 	Exécute les deux commandes, mais attend que la première commande se termine en premier, avant la suivante. Comme un ensemble de dominos.
+> 	Utilisé pour rediriger la sortie. Nous pouvons prendre la sortie d'une commande et l'envoyer à un fichier. Cet opérateur va écraser tout ce qui existe dans le fichier.
+>> 	Ce redirecteur fait la même chose, mais au lieu d'écraser, il ajoutera simplement la sortie au bas du fichier.
+
+Par exemple, echo hey > welcomefait un dossier bienvenu contenant "hey". Nous pouvons utiliser cat welcomepour vérifier que ça a fonctionné.
