@@ -36,3 +36,14 @@ Vous devrez...
 3. Maintenant, utilisez echopour sortir le texte TryHackMe.
 
 Astuce pro: Lorsque vous utilisez le terminal, vous pouvez appuyer sur les touches fléchées vers le haut et vers le bas de votre clavier pour faire défiler les commandes que vous avez déjà entrées.
+
+
+Déplacez-vous sans jamais toucher une souris
+
+Apprenons à naviguer dans les fichiers du système via le terminal. Quatre commandes font presque toute la navigation
+ls 	Liste ce qu'il y a dans le dossier courant
+cd 	modifier le répertoire — se déplacer dans un dossier
+cat 	montrer le contenu d'un fichier
+pwd 	Imprimer le répertoire de travail — "où suis-je?"
+
+Sous Linux, vous remarquerez peut-être que les fichiers et les dossiers apparaissent sous différentes couleurs. Cela permet d'identifier facilement ce qu'il est. Sur ce système Linux, les dossiers sont bleus.
