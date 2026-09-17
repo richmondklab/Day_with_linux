@@ -47,3 +47,13 @@ cat 	montrer le contenu d'un fichier
 pwd 	Imprimer le répertoire de travail — "où suis-je?"
 
 Sous Linux, vous remarquerez peut-être que les fichiers et les dossiers apparaissent sous différentes couleurs. Cela permet d'identifier facilement ce qu'il est. Sur ce système Linux, les dossiers sont bleus.
+
+
+
+Ne cherchez plus jamais les choses à la main
+
+Nous pouvons utiliser un ensemble de Linux commandes pour nous aider à rechercher et à travers les fichiers. Plutôt que de faire défiler beaucoup de texte, nous pouvons demander à Linux de faire le travail difficile pour nous:
+find 	Rechercher des fichiers par leur nom. Par exemple, find -name passwords.txt
+grep 	Recherche à l'intérieur pour le texte. Par exemple, grep "password123" passwords.txt
+
+Il y a un fichier journal à partir d'un serveur Web dans votre dossier d'accueil appelé access.log, qui fait des centaines de lignes. Quelque part à l'intérieur est un drapeau.
